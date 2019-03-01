@@ -92,6 +92,7 @@ describe('calculator.js', function(){
 		expect(calculator.add(20)).toBe(70);
 		expect(calculator.total).toMatch(/-?\d+/);
 		expect(typeof calculator.total).toMatch('number');
+		expect(calculator.total).toBeNumber(); //from third party matchers jasmine-matchers.js
 		expect(calculator.total).toEqual(jasmine.anything());
 	});
 
