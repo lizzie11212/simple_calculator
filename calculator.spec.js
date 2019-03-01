@@ -50,4 +50,13 @@ describe('calculator.js', function(){
 
 		expect(calculator1).not.toBe(calculator2);
 	})
+
+	it('has common operations', function(){
+		const calculator = new Calculator();
+
+		expect(calculator.add).toBeDefined() //or not.toBeUndefined();
+		expect(calculator.substract).toBeDefined();
+		expect(calculator.multiply).toBeDefined();
+		expect(calculator.divide).toBeDefined();
+	})
 });
