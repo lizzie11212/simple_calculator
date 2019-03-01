@@ -28,6 +28,13 @@ describe('calculator.js', function(){
 		expect(calculator.total).toBe(100);
 	});
 
+	it('should initialize the total', function(){
+		const calculator = new Calculator();
+
+		expect(calculator.total).toBe(0);
+		expect(calculator.total).toBeFalsy();
+	})
+
 	it('can be instantiated', function(){
 		const calculator = new Calculator();
 		const calculator2 = new Calculator();
