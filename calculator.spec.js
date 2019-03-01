@@ -68,4 +68,12 @@ describe('calculator.js', function(){
 		expect(calculator.total).toBeNull();
 	})
 
+	it ('does not hadle NaN', function(){
+		const calculator = new Calculator();
+
+		calculator.total = 20;
+		calculator.multiply('a');
+		expect (calculator.total).toBeNaN(); 
+	})
+
 });
