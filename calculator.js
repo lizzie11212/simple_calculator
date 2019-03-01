@@ -20,4 +20,4 @@ Calculator.prototype.divide = function(number){
 	}
 	
 	return this.total /= number;
-}
+};

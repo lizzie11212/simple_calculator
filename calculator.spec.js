@@ -76,4 +76,10 @@ describe('calculator.js', function(){
 		expect (calculator.total).toBeNaN(); 
 	})
 
+	it ('handles divide by zero', function(){
+		const calculator = new Calculator();
+		expect(function(){ calculator.divide(0) }).toThrow();
+	})
+
+
 });
