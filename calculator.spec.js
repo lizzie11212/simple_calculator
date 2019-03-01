@@ -79,6 +79,8 @@ describe('calculator.js', function(){
 	it ('handles divide by zero', function(){
 		const calculator = new Calculator();
 		expect(function(){ calculator.divide(0) }).toThrow();
+		expect(function(){ calculator.divide(0) }).toThrowError(Error);
+		expect(function(){ calculator.divide(0) }).toThrowError(Error, 'Cannot divide by zero');
 	})
 
 
