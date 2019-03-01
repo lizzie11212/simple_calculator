@@ -28,10 +28,12 @@ describe('calculator.js', function(){
 		expect(calculator.total).toBe(100);
 	});
 
-	it('has constructor', function(){
+	it('can be instantiated', function(){
 		const calculator = new Calculator();
 		const calculator2 = new Calculator();
 
+		expect(calculator).toBeTruthy();
+		expect(calculator2).toBeTruthy();
 		expect(calculator).toEqual(calculator2);
 	})
 });
