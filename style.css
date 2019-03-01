@@ -11,6 +11,10 @@
 	font-size: 52px;
 }
 
+input::placeholder {
+	color: #E0E0E0;
+}
+
 .input, 
 .result-container {
 	width: 100%;
