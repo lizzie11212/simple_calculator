@@ -36,9 +36,11 @@ describe('calculator.js', function(){
 	})
 
 	it('can be instantiated', function(){
+		jasmine.addMatchers(customMatchers);
 		const calculator = new Calculator();
 		const calculator2 = new Calculator();
 
+		expect(calculator).toBeCalculator(); // custom matcher !
 		expect(calculator).toBeTruthy();
 		expect(calculator2).toBeTruthy();
 		expect(calculator).toEqual(calculator2);
