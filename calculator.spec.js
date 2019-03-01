@@ -27,4 +27,11 @@ describe('calculator.js', function(){
 		calculator.divide(2);
 		expect(calculator.total).toBe(100);
 	});
+
+	it('has constructor', function(){
+		const calculator = new Calculator();
+		const calculator2 = new Calculator();
+
+		expect(calculator).toEqual(calculator2);
+	})
 });
