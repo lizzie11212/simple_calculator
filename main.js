@@ -13,11 +13,6 @@ function calculate(inputValue){
 		return;
 	}
 
-	if (numberB === 0){
-		updateResult('Cannot divide by zero');
-		return;
-	}
-
 	const calculator = new Calculator();
 	calculator.add(numberA);
 
@@ -33,6 +28,12 @@ function calculate(inputValue){
 			result = calculator.multiply(numberB);
 			break;
 		case '/':
+			
+			if (numberB === 0){
+				updateResult('Cannot divide by zero');
+				return;
+			}
+
 			result = calculator.divide(numberB);
 			break;
 	}
